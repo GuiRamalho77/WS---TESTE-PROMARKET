@@ -20,6 +20,7 @@ namespace SampleWebApiAspNetCore.v2.Controllers
         [HttpGet("BuscarClientes")]
         public JsonResult BuscarClientes()
         {
+            //alterar o banco
             var connectionString = "Initial Catalog=BASE_DESENV;Data Source=DESKTOP-4K83T95;Integrated Security=SSPI;";
 
             var retornarCliente = new ProMarket.Data.Repositorio.ClienteRepositorio().RetornarClientes(_appSettings.Value.ConnectString ?? connectionString);
